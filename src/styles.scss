@@ -2,24 +2,89 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 * {
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  //font-family: 'Poppins', sans-serif;
 }
 
-.nav_big_link::after {
-  content: "";
+// Header -----------------------
+.mat-menu-content:not(:empty) {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+// Toolbar -----------------------
+mat-toolbar {
+  // !important
+  height: 52px !important;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .2), 0 3px 3px -2px rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12) !important;
+  background: rgb(28, 27, 126) !important;
+  background: -moz-linear-gradient(90deg, rgba(28, 27, 126, 1) 30%, rgba(140, 75, 255, 1) 100%) !important;
+  background: -webkit-linear-gradient(90deg, rgba(28, 27, 126, 1) 30%, rgba(140, 75, 255, 1) 100%) !important;
+  background: linear-gradient(90deg, rgba(28, 27, 126, 1) 30%, rgba(140, 75, 255, 1) 100%) !important;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1c1b7e", endColorstr="#8c4bff", GradientType=1) !important;
+
+  & .logo_wrap {
+    & a {
+      & mat-icon {
+        color: #fff !important;
+      }
+    }
+  }
+
+  & .header_list_wrap {
+    & ul {
+      & li {
+        & a {
+          //color: #B0B0B0;
+          //color: black;
+          color: white !important;
+        }
+      }
+    }
+  }
+}
+
+// Nav Link -----------------------
+
+.nav_big_link {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+// Nav Link Hover
+
+.underline {
+  //background-color: #B0B0B0;
+  background-color: #fff;
   display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 0;
-  height: 0.1rem;
-  background: white;
-  transition: width 0.3s;
+  box-sizing: border-box;
+  height: 0;
+  transition: width 0.4s;
 }
 
-.nav_big_link:hover::after {
+.nav_big_link:hover > .underline {
+  //background-color: #B0B0B0;
+  background-color: #fff;
   width: 100%;
-  transition: width 0.3s;
+  height: 2px;
+  transition: width 0.4s;
+  -webkit-transform: translate3d(0, 0, 0);
 }
+
+// -----------------------
 
 /* Hero */
 
@@ -57,3 +122,4 @@
   width: 100%;
   height: 100%;
 }
+
