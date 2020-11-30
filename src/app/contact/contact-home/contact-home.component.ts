@@ -2,32 +2,21 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import Marker = google.maps.Marker;
 
-
 // npm install @types/googlemaps
 // Omogucava koriscenje google globalne varijable zajedno sa typescript-om
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.scss']
+  selector: 'app-contact-home',
+  templateUrl: './contact-home.component.html',
+  styleUrls: ['./contact-home.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class ContactHomeComponent implements OnInit {
 
   private googleMap: google.maps.Map
 
   @ViewChild('gmap') gmapElement: any;
 
   constructor() {
-  }
-
-  addUserMarker(): void {
-    new google.maps.Marker({
-      map: this.googleMap,
-      position: {
-        lat: 2455,
-        lng: 1255
-      }
-    })
   }
 
   ngOnInit() {
@@ -39,6 +28,16 @@ export class ContactComponent implements OnInit {
         }
       }
     )
+  }
+
+  addUserMarker(): void {
+    new google.maps.Marker({
+      map: this.googleMap,
+      position: {
+        lat: 2455,
+        lng: 1255
+      }
+    })
   }
 
 

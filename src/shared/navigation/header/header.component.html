@@ -1,0 +1,79 @@
+<mat-toolbar>
+  <div class="lg:hidden hamburger">
+    <a mat-icon-button (click)="onToggleSidenav()">
+      <mat-icon class="logo">menu</mat-icon>
+    </a>
+  </div>
+  <a
+    routerLink="">
+    <img
+      class="w-auto h-12 ml-6"
+      src="/assets/svg/union.svg"
+      alt="Union"
+    />
+  </a>
+  <div class="hidden lg:block w-full header_list_wrap">
+    <ul
+      class="list-none mr-6 font-poppins lg:flex lg:justify-center lg:items-center"
+    >
+      <li class="px-3 inline-block">
+        <a
+          routerLink=""
+          routerLinkActive="active"
+        >Pocetna
+          <div class="underline"></div>
+        </a>
+      </li>
+      <li class="px-3 inline-block">
+        <!-- O Univerzitetu -> Clanice, Akti, Akreditacija -->
+        <a
+          routerLink="/about-us"
+          routerLinkActive="active"
+        >O Univerzitetu
+          <div class="underline"></div>
+          <!-- <mat-icon>arrow_drop_down</mat-icon>-->
+        </a>
+      </li>
+      <!--      <li class="px-3 inline-block">-->
+      <!--        <a-->
+      <!--          href="javascript:;"-->
+      <!--        >Repozitorijum-->
+      <!--          <div class="underline"></div>-->
+      <!--        </a>-->
+      <!--      </li>-->
+      <!--      <li class="px-3 inline-block">-->
+      <!--        <a-->
+      <!--          href="javascript:;"-->
+      <!--        >Info-->
+      <!--          <div class="underline"></div>-->
+      <!--          <mat-icon>arrow_drop_down</mat-icon>-->
+      <!--        </a>-->
+      <!--      </li>-->
+      <!--      <li class="px-3 inline-block">-->
+      <!--        <a-->
+      <!--          href="javascript:;"-->
+      <!--        >Izbori u zvanje-->
+      <!--          <div class="underline"></div>-->
+      <!--          <mat-icon>arrow_drop_down</mat-icon>-->
+      <!--        </a>-->
+      <!--      </li>-->
+      <!--      <li class="px-3 inline-block">-->
+      <!--        <a-->
+      <!--          href="javascript:;"-->
+      <!--        >Saradnja-->
+      <!--          <div class="underline"></div>-->
+      <!--          <mat-icon>arrow_drop_down</mat-icon>-->
+      <!--        </a>-->
+      <!--      </li>-->
+      <li class="px-3 inline-block">
+        <a
+          routerLink="/contact"
+          routerLinkActive="active"
+        >Kontakt
+          <div class="underline"></div>
+        </a>
+      </li>
+    </ul>
+
+  </div>
+</mat-toolbar>

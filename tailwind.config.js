@@ -9,6 +9,9 @@ module.exports = {
         // top right bottom left
         "30%": "0 30% 0 30%",
       },
+      height: {
+        176:'704px'
+      },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },

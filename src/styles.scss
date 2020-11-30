@@ -17,7 +17,7 @@ body {
 }
 
 .wrapper {
-  padding-top: 53px;
+  padding-top: 60px;
 }
 
 // Header -----------------------
@@ -29,7 +29,7 @@ body {
 // Toolbar -----------------------
 mat-toolbar {
   // !important
-  height: 52px !important;
+  height: 60px !important;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .2), 0 3px 3px -2px rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12) !important;
   background: rgb(28, 27, 126) !important;
   background: -moz-linear-gradient(90deg, rgba(28, 27, 126, 1) 30%, rgba(140, 75, 255, 1) 100%) !important;
@@ -37,7 +37,7 @@ mat-toolbar {
   background: linear-gradient(90deg, rgba(28, 27, 126, 1) 30%, rgba(140, 75, 255, 1) 100%) !important;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1c1b7e", endColorstr="#8c4bff", GradientType=1) !important;
 
-  & .logo_wrap {
+  & .hamburger {
     & a {
       & mat-icon {
         color: #fff !important;
@@ -136,3 +136,19 @@ mat-toolbar {
   height: 100%;
 }
 
+// Footer
+
+.footer_link_wrap li a {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    color: white;
+  }
+}
