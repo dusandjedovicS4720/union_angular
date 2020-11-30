@@ -1,11 +1,1 @@
-<app-header (sidenavToggle)="sidenav.toggle()" class=" fixed z-50 w-full"></app-header>
-<mat-sidenav-container class="h-full">
-  <mat-sidenav #sidenav role="navigation" fixedInViewport="true" class="w-72 h-full">
-    <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
-  </mat-sidenav>
-  <mat-sidenav-content class="h-full">
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
-
-
+<router-outlet></router-outlet>

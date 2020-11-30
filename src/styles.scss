@@ -2,6 +2,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+html {
+  overflow-y: scroll;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -10,6 +14,10 @@ body {
 * {
   box-sizing: border-box;
   //font-family: 'Poppins', sans-serif;
+}
+
+.wrapper {
+  padding-top: 53px;
 }
 
 // Header -----------------------
@@ -44,47 +52,52 @@ mat-toolbar {
           //color: #B0B0B0;
           //color: black;
           color: white !important;
+          font-size: 15px;
+          display: flex;
+          align-items: center;
+          flex-wrap: wrap;
+          position: relative;
+
+          & .underline {
+            //background-color: #B0B0B0;
+            background-color: #fff;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            box-sizing: border-box;
+            height: 0;
+            transition: width 0.4s;
+          }
+
+          &:hover > .underline {
+            //background-color: #B0B0B0;
+            background-color: #fff;
+            width: 100%;
+            height: 2px;
+            transition: width 0.4s;
+            -webkit-transform: translate3d(0, 0, 0);
+          }
         }
+
+        & .active {
+          .underline {
+            background-color: #fff;
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            box-sizing: border-box;
+          }
+        }
+
       }
     }
   }
 }
-
-// Nav Link -----------------------
-
-.nav_big_link {
-  font-size: 15px;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  position: relative;
-}
-
-// Nav Link Hover
-
-.underline {
-  //background-color: #B0B0B0;
-  background-color: #fff;
-  display: block;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  box-sizing: border-box;
-  height: 0;
-  transition: width 0.4s;
-}
-
-.nav_big_link:hover > .underline {
-  //background-color: #B0B0B0;
-  background-color: #fff;
-  width: 100%;
-  height: 2px;
-  transition: width 0.4s;
-  -webkit-transform: translate3d(0, 0, 0);
-}
-
-// -----------------------
 
 /* Hero */
 
