@@ -2,6 +2,10 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+html, body {
+  height: 100%;
+}
+
 html {
   overflow-y: scroll;
 }
@@ -38,62 +42,62 @@ mat-toolbar {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#1c1b7e", endColorstr="#8c4bff", GradientType=1) !important;
 
   & .hamburger {
-    & a {
-      & mat-icon {
-        color: #fff !important;
-      }
+    mat-icon {
+      color: #fff !important;
     }
   }
 
   & .header_list_wrap {
-    & ul {
-      & li {
-        & a {
-          //color: #B0B0B0;
-          //color: black;
-          color: white !important;
-          font-size: 15px;
-          display: flex;
-          align-items: center;
-          flex-wrap: wrap;
-          position: relative;
 
-          & .underline {
-            //background-color: #B0B0B0;
-            background-color: #fff;
-            display: block;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            box-sizing: border-box;
-            height: 0;
-            transition: width 0.4s;
-          }
+    & a {
 
-          &:hover > .underline {
-            //background-color: #B0B0B0;
-            background-color: #fff;
-            width: 100%;
-            height: 2px;
-            transition: width 0.4s;
-            -webkit-transform: translate3d(0, 0, 0);
-          }
+      //color: #B0B0B0;
+      //color: black;
+      position: relative;
+      color: white !important;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+
+      &:hover {
+        color: #FDE895 !important;
+        transition: .9s;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%) scaleX(0);
+        -webkit-transform: translateX(-50%) scaleX(0);
+        transform-origin: 50% 50%;
+        -webkit-transform-origin: 50% 50%;
+        width: 100%;
+        height: 2px;
+        background-color: #FDE895 !important;;
+        transition: transform 250ms;
+        -webkit-transition: transform 250ms;
+      }
+
+      &:hover:after {
+        transform: translateX(-50%) scaleX(1);
+        -webkit-transform: translateX(-50%) scaleX(1);
+      }
+
+      &.active {
+        color: #FDE895 !important;
+
+        .underline {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #FDE895 !important;;
         }
-
-        & .active {
-          .underline {
-            background-color: #fff;
-            display: block;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            box-sizing: border-box;
-          }
-        }
-
       }
     }
   }

@@ -1,79 +1,75 @@
 <mat-toolbar>
-  <div class="lg:hidden hamburger">
-    <a mat-icon-button (click)="onToggleSidenav()">
-      <mat-icon class="logo">menu</mat-icon>
-    </a>
-  </div>
-  <a
-    routerLink="">
-    <img
-      class="w-auto h-12 ml-6"
-      src="/assets/svg/union.svg"
-      alt="Union"
-    />
-  </a>
-  <div class="hidden lg:block w-full header_list_wrap">
-    <ul
-      class="list-none mr-6 font-poppins lg:flex lg:justify-center lg:items-center"
-    >
-      <li class="px-3 inline-block">
-        <a
-          routerLink=""
-          routerLinkActive="active"
-        >Pocetna
-          <div class="underline"></div>
+
+  <div class="container mx-auto">
+
+    <div class="flex flex-row items-center">
+
+      <div class="lg:hidden hamburger">
+        <a mat-icon-button (click)="onToggleSidenav()">
+          <mat-icon class="logo">menu</mat-icon>
         </a>
-      </li>
-      <li class="px-3 inline-block">
-        <!-- O Univerzitetu -> Clanice, Akti, Akreditacija -->
-        <a
-          routerLink="/about-us"
-          routerLinkActive="active"
-        >O Univerzitetu
-          <div class="underline"></div>
-          <!-- <mat-icon>arrow_drop_down</mat-icon>-->
-        </a>
-      </li>
-      <!--      <li class="px-3 inline-block">-->
-      <!--        <a-->
-      <!--          href="javascript:;"-->
-      <!--        >Repozitorijum-->
-      <!--          <div class="underline"></div>-->
-      <!--        </a>-->
-      <!--      </li>-->
-      <!--      <li class="px-3 inline-block">-->
-      <!--        <a-->
-      <!--          href="javascript:;"-->
-      <!--        >Info-->
-      <!--          <div class="underline"></div>-->
-      <!--          <mat-icon>arrow_drop_down</mat-icon>-->
-      <!--        </a>-->
-      <!--      </li>-->
-      <!--      <li class="px-3 inline-block">-->
-      <!--        <a-->
-      <!--          href="javascript:;"-->
-      <!--        >Izbori u zvanje-->
-      <!--          <div class="underline"></div>-->
-      <!--          <mat-icon>arrow_drop_down</mat-icon>-->
-      <!--        </a>-->
-      <!--      </li>-->
-      <!--      <li class="px-3 inline-block">-->
-      <!--        <a-->
-      <!--          href="javascript:;"-->
-      <!--        >Saradnja-->
-      <!--          <div class="underline"></div>-->
-      <!--          <mat-icon>arrow_drop_down</mat-icon>-->
-      <!--        </a>-->
-      <!--      </li>-->
-      <li class="px-3 inline-block">
-        <a
-          routerLink="/contact"
-          routerLinkActive="active"
-        >Kontakt
-          <div class="underline"></div>
-        </a>
-      </li>
-    </ul>
+      </div>
+
+      <a
+        routerLink="">
+        <img
+          class="w-12 h-12 ml-6 mr-0"
+          src="/assets/svg/union.svg"
+          alt="Union"
+        />
+      </a>
+
+      <div class="hidden lg:block w-full header_list_wrap">
+
+        <ul class="list-none mr-12 font-poppins lg:flex lg:justify-center lg:items-center">
+
+          <li
+            *ngFor="let listItem of listItems" class="px-3 inline-block"
+          >
+
+            <a
+              [attr.href]="listItem.isAnchor ?  '#' : ''"
+              [routerLink]="!listItem.isAnchor ? listItem.link : null"
+
+              [routerLinkActive]="!listItem.isAnchor ? 'active' : ''"
+              [routerLinkActiveOptions]="{ exact: true }"
+
+              [class.active]="router.isActive(listItem.link, true)"
+              [attr.style]="listItem.isAnchor ? 'padding-left:7px' : null"
+            >
+
+              {{ listItem.name }}
+
+              <mat-icon *ngIf="listItem.isAnchor">arrow_drop_down</mat-icon>
+              <div *ngIf="listItem.isAnchor;" [matMenuTriggerFor]="menu"
+                   class="absolute top-0 bottom-0 left-0 right-0"
+              >
+
+                <mat-menu #menu="matMenu">
+
+                  <a *ngFor="let dropdownItem of listItem.dropdownItems"
+                     [routerLink]="dropdownItem.link"
+                     mat-menu-item
+                  >
+                    <span>{{ dropdownItem.name }}</span>
+                  </a>
+
+                </mat-menu>
+
+              </div>
+
+              <div class="underline"></div>
+
+            </a>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
 
   </div>
+
 </mat-toolbar>

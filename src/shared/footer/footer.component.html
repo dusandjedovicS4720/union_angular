@@ -1,36 +1,39 @@
-<div class="w-full bg-blue-1000 text-white">
-  <div
-    class="relative flex flex-col justify-center items-center px-6 mt-8"
-    style="border-top: 1px solid #ebebeb">
+<div class="mt-10 font-poppins" [ngStyle]="{'background-color':backgroundColor,'color':textColor}">
 
-    <div class="mt-10 mb-2">
-      <a
-        routerLink="">
-        <img
-          class="h-14"
-          src="/assets/svg/union.svg"
-          alt="Union"
-        />
-      </a>
+  <div class="container mx-auto">
+
+    <div class="relative flex flex-col justify-center items-center px-6">
+
+      <div class="mt-10 mb-2">
+        <a
+          routerLink="">
+          <img
+            class="h-14"
+            [src]="isLogoDark === true ? logoDark : logoLight"
+            alt="Union"
+          />
+        </a>
+      </div>
+
+      <ul class="w-full list-none text-center p-3 mb-2">
+        <li class="mr-3 lg:mr-0">Univerzitet UNION © 2020 | <span [ngStyle]="{'color':nameColor}" style="font-size:19px;">DusanDjedovic</span>
+        </li>
+      </ul>
+
+      <ul class="footer_link_wrap w-full list-none flex flex-wrap justify-center py-2 mb-10">
+        <li class="mr-4 lg:mr-7"><a routerLink="">Pocetna</a></li>
+        <li class="mr-4 lg:mr-7"><a routerLink="/contact">Kontakt</a></li>
+        <li class="mr-4 lg:mr-7"><a routerLink="/about-us">O Univerzitetu</a></li>
+        <!--      <li class="mr-4 lg:mr-7"><a routerLink="">Link4</a></li>-->
+        <!--      <li class="mr-4 lg:mr-7"><a routerLink="">Link5</a></li>-->
+        <!--      <li class="mr-4 lg:mr-7"><a routerLink="">Link6</a></li>-->
+        <!--      <li class="mr-4 lg:mr-7"><a routerLink="">Link7</a></li>-->
+        <!--      <li class="mr-4 lg:mr-7"><a routerLink="">Link8</a></li>-->
+        <!--      <li class="mr-4 lg:mr-7"><a routerLink="">Link9</a></li>-->
+        <!--      <li class="mr-4 lg:mr-7"><a routerLink="">Link10</a></li>-->
+      </ul>
+
     </div>
-
-    <ul class="w-full list-none text-center p-3 mb-2 font-poppins">
-      <li class="mr-3 lg:mr-0">Univerzitet UNION © 2020 | <span class="text-yellow-1000" style="font-size:19px;">DusanDjedovic</span>
-      </li>
-    </ul>
-
-    <ul class="footer_link_wrap w-full list-none flex flex-wrap justify-center py-2 mb-10">
-      <li class="mr-4 lg:mr-7"><a routerLink="">Pocetna</a></li>
-      <li class="mr-4 lg:mr-7"><a routerLink="/contact">Kontakt</a></li>
-      <li class="mr-4 lg:mr-7"><a routerLink="/about">O Univerzitetu</a></li>
-      <li class="mr-4 lg:mr-7"><a routerLink="">Link4</a></li>
-      <li class="mr-4 lg:mr-7"><a routerLink="">Link5</a></li>
-      <li class="mr-4 lg:mr-7"><a routerLink="">Link6</a></li>
-      <li class="mr-4 lg:mr-7"><a routerLink="">Link7</a></li>
-      <li class="mr-4 lg:mr-7"><a routerLink="">Link8</a></li>
-      <li class="mr-4 lg:mr-7"><a routerLink="">Link9</a></li>
-      <li class="mr-4 lg:mr-7"><a routerLink="">Link10</a></li>
-    </ul>
 
   </div>
 

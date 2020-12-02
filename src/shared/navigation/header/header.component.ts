@@ -1,4 +1,5 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output, Input} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,9 @@ export class HeaderComponent implements OnInit {
 
   @Output() public sidenavToggle = new EventEmitter();
 
-  constructor() {
+  @Input() listItems: any = [];
+
+  constructor(public router: Router) {
   }
 
   ngOnInit(): void {
@@ -18,6 +21,5 @@ export class HeaderComponent implements OnInit {
   onToggleSidenav = () => {
     this.sidenavToggle.emit();
   }
-
 
 }

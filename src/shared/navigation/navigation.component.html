@@ -1,4 +1,4 @@
-<app-header (sidenavToggle)="sidenav.toggle()" class=" fixed z-50 w-full"></app-header>
+<app-header [listItems]="listItems" (sidenavToggle)="sidenav.toggle()" class=" fixed z-50 w-full"></app-header>
 <mat-sidenav-container class="h-full">
   <mat-sidenav #sidenav role="navigation" fixedInViewport="true" class="w-72 h-full">
     <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
