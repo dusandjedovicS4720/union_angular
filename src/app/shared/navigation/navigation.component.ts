@@ -10,7 +10,7 @@ export class NavigationBaseComponent implements OnInit {
   listItems: any = [
     {
       name: "Pocetna",
-      link: "",
+      link: "/home",
       isAnchor: false
     },
     {
@@ -18,12 +18,12 @@ export class NavigationBaseComponent implements OnInit {
       isAnchor: true,
       link: "/about-us",
       dropdownItems: [
-        {name: "Ukratko", link: "/about-us"},
-        {name: "Brosura Univerziteta", link: "/about-us"},
-        {name: "Informator o radu", link: "/about-us"},
-        {name: "Rektor Univerziteta", link: "/about-us"},
-        {name: "Senat Univerziteta", link: "/about-us"},
-        {name: "Savet Univerziteta", link: "/about-us"}
+        {name: "Ukratko", link: "/about-us", tabIndex: 0},
+        {name: "Brosura Univerziteta", link: "/about-us", tabIndex: 1},
+        {name: "Informator o radu", link: "/about-us", tabIndex: 2},
+        {name: "Rektor Univerziteta", link: "/about-us", tabIndex: 3},
+        {name: "Senat Univerziteta", link: "/about-us", tabIndex: 4},
+        {name: "Savet Univerziteta", link: "/about-us", tabIndex: 5}
       ]
     },
     {

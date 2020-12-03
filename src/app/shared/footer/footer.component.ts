@@ -11,12 +11,8 @@ export class FooterComponent implements OnInit {
 
   @Input() backgroundColor: string = "#1c1b7e"
   @Input() textColor: string = "#fff"
-
   @Input() nameColor: string = "#Fde895"
-
   @Input() isLogoDark: boolean = false;
-  logoLight: string = "../../assets/svg/union.svg"
-  logoDark: string = "../../assets/svg/union_dark.svg"
 
   constructor() {
   }

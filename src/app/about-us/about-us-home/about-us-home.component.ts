@@ -7,6 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutUsHomeComponent implements OnInit {
 
+  tabs: any = [
+    {name:'Ukratko'},
+    {name:'Brosura univerziteta'},
+    {name:'Informator o radu'},
+    {name:'Rektor univerziteta'},
+    {name:'Senat univerziteta'},
+    {name:'Savet univerziteta'}
+
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

@@ -7,14 +7,19 @@ import {HeaderComponent} from "./navigation/header/header.component";
 import {SidenavListComponent} from "./navigation/sidenav-list/sidenav-list.component";
 import {NavigationBaseComponent} from "./navigation/navigation.component";
 import {FooterComponent} from "./footer/footer.component";
-
+import {UnionLogoComponent} from './union-logo/union-logo.component';
+import {OverlayImageComponent} from './navigation/overlay-image/overlay-image.component';
+import {TabsComponent} from './tabs/tabs.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     SidenavListComponent,
     NavigationBaseComponent,
-    FooterComponent
+    FooterComponent,
+    UnionLogoComponent,
+    OverlayImageComponent,
+    TabsComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +31,10 @@ import {FooterComponent} from "./footer/footer.component";
     HeaderComponent,
     SidenavListComponent,
     NavigationBaseComponent,
-    FooterComponent
+    FooterComponent,
+    UnionLogoComponent,
+    OverlayImageComponent,
+    TabsComponent
   ]
 })
 export class SharedModule {

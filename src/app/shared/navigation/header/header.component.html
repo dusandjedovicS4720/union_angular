@@ -1,0 +1,75 @@
+<mat-toolbar>
+
+  <div class="container mx-auto">
+
+    <div class="flex flex-row items-center">
+
+      <div class="lg:hidden hamburger">
+        <a mat-icon-button (click)="onToggleSidenav()">
+          <mat-icon class="logo">menu</mat-icon>
+        </a>
+      </div>
+
+      <div class="ml-6 mr-0">
+        <app-union-logo [isLogoDark]="false"></app-union-logo>
+      </div>
+
+      <div class="hidden lg:block w-full header_list_wrap">
+
+        <ul class="list-none mr-12 font-poppins lg:flex lg:justify-center lg:items-center">
+
+          <li
+            *ngFor="let listItem of listItems" class="px-3 inline-block"
+          >
+
+            <a
+              *ngIf="!listItem.isAnchor"
+              [routerLink]="listItem.link"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+
+              {{ listItem.name }}
+
+              <div class="underline"></div>
+
+            </a>
+
+            <div
+              *ngIf="listItem.isAnchor"
+              class="dropdownWrap pl-2"
+              [class.active]="router.isActive(listItem.link, false)"
+              [matMenuTriggerFor]="menu"
+            >
+
+              {{ listItem.name }}
+
+              <mat-icon>arrow_drop_down</mat-icon>
+
+              <mat-menu #menu="matMenu">
+
+                <a *ngFor="let dropdownItem of listItem.dropdownItems"
+                   [routerLink]="dropdownItem.link"
+                   [queryParams]="{tabIndex: dropdownItem.tabIndex}"
+                   mat-menu-item
+                >
+                  <span>{{ dropdownItem.name }}</span>
+                </a>
+
+              </mat-menu>
+
+              <div class="underline"></div>
+
+            </div>
+
+          </li>
+
+        </ul>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</mat-toolbar>

@@ -2,12 +2,8 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-html, body {
-  height: 100%;
-}
-
 html {
-  overflow-y: scroll;
+  height: 101%;
 }
 
 body {
@@ -17,11 +13,11 @@ body {
 
 * {
   box-sizing: border-box;
-  //font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 .wrapper {
-  padding-top: 60px;
+  padding-top: 65px;
 }
 
 // Header -----------------------
@@ -33,7 +29,7 @@ body {
 // Toolbar -----------------------
 mat-toolbar {
   // !important
-  height: 60px !important;
+  height: 65px !important;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .2), 0 3px 3px -2px rgba(0, 0, 0, .14), 0 1px 8px 0 rgba(0, 0, 0, .12) !important;
   background: rgb(28, 27, 126) !important;
   background: -moz-linear-gradient(90deg, rgba(28, 27, 126, 1) 30%, rgba(140, 75, 255, 1) 100%) !important;
@@ -49,13 +45,15 @@ mat-toolbar {
 
   & .header_list_wrap {
 
-    & a {
+    & a,
+    & .dropdownWrap {
 
       //color: #B0B0B0;
       //color: black;
       position: relative;
       color: white !important;
       font-size: 15px;
+      cursor: pointer;
       display: flex;
       align-items: center;
       flex-wrap: wrap;
