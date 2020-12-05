@@ -18,7 +18,7 @@ export class NavigationBaseComponent implements OnInit {
       isAnchor: true,
       link: "/about-us",
       dropdownItems: [
-        {name: "Ukratko", link: "/ukratko"},
+        {name: "Istorijat", link: "/istorijat"},
         {
           name: "Brosura Univerziteta",
           link: "/brosuraUniverziteta",
