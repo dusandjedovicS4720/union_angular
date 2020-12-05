@@ -48,13 +48,24 @@
 
               <mat-menu #menu="matMenu">
 
-                <a *ngFor="let dropdownItem of listItem.dropdownItems"
-                   [routerLink]="dropdownItem.link"
-                   [queryParams]="{tabIndex: dropdownItem.tabIndex}"
-                   mat-menu-item
+                <div *ngFor="let dropdownItem of listItem.dropdownItems"
                 >
-                  <span>{{ dropdownItem.name }}</span>
-                </a>
+
+                  <a *ngIf="dropdownItem.isDocument"
+                     target="_blank"
+                     [href]="dropdownItem.documentUrl"
+                     mat-menu-item
+                  >
+                    <span>{{ dropdownItem.name }}</span>
+                  </a>
+
+                  <a *ngIf="!dropdownItem.isDocument" [routerLink]="[listItem.link + dropdownItem.link]"
+                     mat-menu-item
+                  >
+                    <span>{{ dropdownItem.name }}</span>
+                  </a>
+
+                </div>
 
               </mat-menu>
 

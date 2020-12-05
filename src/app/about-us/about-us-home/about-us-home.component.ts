@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-about-us-home',
@@ -7,17 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutUsHomeComponent implements OnInit {
 
-  tabs: any = [
-    {name:'Ukratko'},
-    {name:'Brosura univerziteta'},
-    {name:'Informator o radu'},
-    {name:'Rektor univerziteta'},
-    {name:'Senat univerziteta'},
-    {name:'Savet univerziteta'}
-
-  ];
-
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }

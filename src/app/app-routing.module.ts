@@ -16,6 +16,7 @@ const routes: Routes = [
       import('./about-us/about-us.module').then((m) => m.AboutUsModule),
   },
   {path: 'home', component: HomeComponent},
+  {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', component: NotFoundComponent}
 ];
 

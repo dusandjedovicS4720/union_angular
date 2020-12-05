@@ -18,13 +18,22 @@ export class NavigationBaseComponent implements OnInit {
       isAnchor: true,
       link: "/about-us",
       dropdownItems: [
-        {name: "Ukratko", link: "/about-us", tabIndex: 0},
-        {name: "Brosura Univerziteta", link: "/about-us", tabIndex: 1},
-        {name: "Informator o radu", link: "/about-us", tabIndex: 2},
-        {name: "Rektor Univerziteta", link: "/about-us", tabIndex: 3},
-        {name: "Senat Univerziteta", link: "/about-us", tabIndex: 4},
-        {name: "Savet Univerziteta", link: "/about-us", tabIndex: 5}
-      ]
+        {name: "Ukratko", link: "/ukratko"},
+        {
+          name: "Brosura Univerziteta",
+          link: "/brosuraUniverziteta",
+          isDocument: true,
+          documentUrl: "/assets/about-us/BrosuraUniverziteta.pdf"
+        },
+        {
+          name: "Informator o radu",
+          link: "/informatorORadu",
+          isDocument: true,
+          documentUrl: "/assets/about-us/InformatorORadu.pdf"
+        },
+        {name: "Rektor Univerziteta", link: "/rektorUniverziteta"},
+        {name: "Senat i savet Univerziteta", link: "/senatSavetUniverziteta"}
+        ]
     },
     {
       name: "Kontakt",

@@ -13,7 +13,6 @@ body {
 
 * {
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
 
 .wrapper {
@@ -73,7 +72,7 @@ mat-toolbar {
         transform-origin: 50% 50%;
         -webkit-transform-origin: 50% 50%;
         width: 100%;
-        height: 2px;
+        height: 2px !important;
         background-color: #FDE895 !important;;
         transition: transform 250ms;
         -webkit-transition: transform 250ms;
@@ -93,7 +92,7 @@ mat-toolbar {
           bottom: 0;
           right: 0;
           width: 100%;
-          height: 2px;
+          height: 2px !important;
           background-color: #FDE895 !important;;
         }
       }

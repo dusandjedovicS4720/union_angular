@@ -9,8 +9,10 @@ import {Router} from '@angular/router';
 export class HeaderComponent implements OnInit {
 
   @Output() public sidenavToggle = new EventEmitter();
+  @Output() dropdownButtonClick = new EventEmitter<string>();
 
   @Input() listItems: any = [];
+
 
   constructor(public router: Router) {
   }
@@ -21,5 +23,4 @@ export class HeaderComponent implements OnInit {
   onToggleSidenav = () => {
     this.sidenavToggle.emit();
   }
-
 }
