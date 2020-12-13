@@ -1,0 +1,118 @@
+<app-navigation>
+
+  <div class="wrapper">
+
+    <app-overlay-image>Akti</app-overlay-image>
+
+    <div class="akreditacija relative container mx-auto m-5 p-4 lg:p-10 lg:p-16 shadow-2xl  font-normal"
+         style="color:#5e709d;background: rgb(235, 244, 253);
+       background: linear-gradient(190deg,rgba(235, 244, 253, 1) 0%,rgba(255, 255, 255, 0) 45%);
+       border-right: 13px solid #42b983; border-radius: 20px;">
+
+      <mat-accordion>
+
+        <mat-expansion-panel>
+          <mat-expansion-panel-header collapsedHeight="80px" expandedHeight="80px">
+            <mat-panel-title style="color:#5e709d !important;font-family: 'Poppins', sans-serif;">
+              <h1 class="font-bold text-sm md:text-base lg:text-lg">Akti o upisu u registar kod Privrednog suda</h1>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <div class="w-full font-poppins" style="color:#5e709d !important;">
+
+            <ng-container *ngFor="let item of akti_o_upisu_u_registar_kod_privrednog_suda; let i = index">
+              <p class="flex flex-row items-center py-4 px-2">
+                <mat-icon class="pr-10">text_snippet</mat-icon>
+                <a href="javascript:;" (click)="on_open_PDF(item.id)">
+                  {{i}} - {{item.id}}
+                </a>
+              </p>
+
+              <div class="nice"></div>
+            </ng-container>
+
+          </div>
+
+        </mat-expansion-panel>
+
+        <mat-expansion-panel>
+          <mat-expansion-panel-header collapsedHeight="80px" expandedHeight="80px">
+            <mat-panel-title style="color:#5e709d !important;font-family: 'Poppins', sans-serif">
+              <h1 class="font-bold text-sm md:text-base lg:text-lg">Opsti akti Univerziteta</h1>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <div class="w-full font-poppins" style="color:#5e709d !important;">
+
+            <ng-container *ngFor="let item of opsti_akti_univerziteta; let i = index">
+              <p class="flex flex-row items-center py-4 px-2">
+                <mat-icon class="pr-10">text_snippet</mat-icon>
+                <a href="javascript:;" (click)="on_open_PDF(item.id)">
+                  {{i}} - {{item.id}}
+                </a>
+              </p>
+              <div class="nice"></div>
+            </ng-container>
+
+          </div>
+
+        </mat-expansion-panel>
+
+        <mat-expansion-panel>
+          <mat-expansion-panel-header collapsedHeight="80px" expandedHeight="80px">
+            <mat-panel-title style="color:#5e709d !important;font-family: 'Poppins', sans-serif">
+              <h1 class="font-bold text-sm md:text-base lg:text-lg">Pojedinacni akti</h1>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <div class="w-full font-poppins" style="color:#5e709d !important;">
+
+            <ng-container *ngFor="let item of pojedinacni_akti; let i = index">
+              <p class="flex flex-row items-center py-4 px-2">
+                <mat-icon class="pr-10">text_snippet</mat-icon>
+                <a href="javascript:;" (click)="on_open_PDF(item.id)">
+                  {{i}} - {{item.id}}
+                </a>
+              </p>
+              <div class="nice"></div>
+            </ng-container>
+
+          </div>
+
+        </mat-expansion-panel>
+
+        <mat-expansion-panel>
+
+          <mat-expansion-panel-header collapsedHeight="80px" expandedHeight="80px">
+            <mat-panel-title style="color:#5e709d !important;font-family: 'Poppins', sans-serif">
+              <h1 class="font-bold text-sm md:text-base lg:text-lg">Finansijski izvestaji</h1>
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+
+          <div class="w-full font-poppins" style="color:#5e709d !important;">
+
+            <ng-container *ngFor="let item of finansijski_izvestaji; let i = index">
+              <p class="flex flex-row items-center py-4 px-2">
+                <mat-icon class="pr-10">text_snippet</mat-icon>
+                <a href="javascript:;" (click)="on_open_PDF(item.id)">
+                  {{i}} - {{item.id}}
+                </a>
+              </p>
+              <div class="nice"></div>
+            </ng-container>
+
+          </div>
+
+        </mat-expansion-panel>
+
+
+      </mat-accordion>
+
+    </div>
+
+    <app-footer [backgroundColor]='"#fff"' [textColor]='"#1c1b7e"' [nameColor]='"#8C4BFF"'
+                [isLogoDark]="true"></app-footer>
+
+  </div>
+
+</app-navigation>

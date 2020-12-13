@@ -9,6 +9,7 @@ import {NavigationBaseComponent} from "./navigation/navigation.component";
 import {FooterComponent} from "./footer/footer.component";
 import {UnionLogoComponent} from './union-logo/union-logo.component';
 import {OverlayImageComponent} from './navigation/overlay-image/overlay-image.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -22,10 +23,12 @@ import {OverlayImageComponent} from './navigation/overlay-image/overlay-image.co
   imports: [
     CommonModule,
     MaterialModule,
-    RouterModule
+    RouterModule,
+    HttpClientModule
   ],
   exports: [
     MaterialModule,
+    HttpClientModule,
     HeaderComponent,
     SidenavListComponent,
     NavigationBaseComponent,

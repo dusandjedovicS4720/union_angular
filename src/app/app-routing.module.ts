@@ -1,23 +1,33 @@
 import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
-import {HomeComponent} from './home/home.component';
-import {NotFoundComponent} from './not-found/not-found.component';
+// import {NotFoundComponent} from './not-found/not-found.component';
+import {PocetnaComponent} from "./pocetna/pocetna.component";
 
 const routes: Routes = [
   {
-    path: 'contact',
+    path: 'kontakt',
     loadChildren: () =>
-      import('./contact/contact.module').then((m) => m.ContactModule),
+      import('./kontakt/kontakt.module').then((m) => m.KontaktModule),
   },
   {
-    path: 'about-us',
+    path: 'o-nama',
     loadChildren: () =>
-      import('./about-us/about-us.module').then((m) => m.AboutUsModule),
+      import('./o-nama/o-nama.module').then((m) => m.ONamaModule),
   },
-  {path: 'home', component: HomeComponent},
-  {path: '', redirectTo: '/home', pathMatch: 'full'},
-  {path: '**', component: NotFoundComponent}
+  {
+    path: 'akti',
+    loadChildren: () =>
+      import('./akti/akti.module').then((m) => m.AktiModule),
+  },
+  {
+    path: 'clanice',
+    loadChildren: () =>
+      import('./clanice/clanice.module').then((m) => m.ClaniceModule),
+  },
+  {path: 'pocetna', component: PocetnaComponent},
+  {path: '', redirectTo: '/pocetna', pathMatch: 'full'},
+  {path: '**', redirectTo: '/pocetna'}
 ];
 
 @NgModule({

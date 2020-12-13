@@ -7,13 +7,13 @@ import {AppRoutingModule} from './app-routing.module';
 import {SharedModule} from "./shared/shared.module";
 
 import {AppComponent} from './app.component';
-import {HomeComponent} from './home/home.component';
 import {NotFoundComponent} from './not-found/not-found.component';
+import {PocetnaComponent} from './pocetna/pocetna.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
+    PocetnaComponent,
     NotFoundComponent
   ],
   imports: [
