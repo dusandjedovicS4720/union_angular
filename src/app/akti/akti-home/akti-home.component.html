@@ -20,11 +20,11 @@
 
           <div class="w-full font-poppins" style="color:#5e709d !important;">
 
-            <ng-container *ngFor="let item of akti_o_upisu_u_registar_kod_privrednog_suda; let i = index">
+            <ng-container *ngFor="let item of akti_o_upisu_u_registar_kod_privrednog_suda;">
               <p class="flex flex-row items-center py-4 px-2">
                 <mat-icon class="pr-10">text_snippet</mat-icon>
                 <a href="javascript:;" (click)="on_open_PDF(item.id)">
-                  {{i}} - {{item.id}}
+                  {{item.naslov}}
                 </a>
               </p>
 
@@ -44,11 +44,11 @@
 
           <div class="w-full font-poppins" style="color:#5e709d !important;">
 
-            <ng-container *ngFor="let item of opsti_akti_univerziteta; let i = index">
+            <ng-container *ngFor="let item of opsti_akti_univerziteta;">
               <p class="flex flex-row items-center py-4 px-2">
                 <mat-icon class="pr-10">text_snippet</mat-icon>
                 <a href="javascript:;" (click)="on_open_PDF(item.id)">
-                  {{i}} - {{item.id}}
+                  {{item.naslov}}
                 </a>
               </p>
               <div class="nice"></div>
@@ -67,11 +67,11 @@
 
           <div class="w-full font-poppins" style="color:#5e709d !important;">
 
-            <ng-container *ngFor="let item of pojedinacni_akti; let i = index">
+            <ng-container *ngFor="let item of pojedinacni_akti;">
               <p class="flex flex-row items-center py-4 px-2">
                 <mat-icon class="pr-10">text_snippet</mat-icon>
                 <a href="javascript:;" (click)="on_open_PDF(item.id)">
-                  {{i}} - {{item.id}}
+                  {{item.naslov}}
                 </a>
               </p>
               <div class="nice"></div>
@@ -91,11 +91,11 @@
 
           <div class="w-full font-poppins" style="color:#5e709d !important;">
 
-            <ng-container *ngFor="let item of finansijski_izvestaji; let i = index">
+            <ng-container *ngFor="let item of finansijski_izvestaji;">
               <p class="flex flex-row items-center py-4 px-2">
                 <mat-icon class="pr-10">text_snippet</mat-icon>
                 <a href="javascript:;" (click)="on_open_PDF(item.id)">
-                  {{i}} - {{item.id}}
+                  {{item.naslov}}
                 </a>
               </p>
               <div class="nice"></div>
