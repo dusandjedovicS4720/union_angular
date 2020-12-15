@@ -1,20 +1,20 @@
 import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import {ONamaHomeComponent} from "./o-nama-home.component";
+import {OUniverzitetuHomeComponent} from "./o-univerzitetu-home.component";
 
-describe('ONamaHomeComponent', () => {
-  let component: ONamaHomeComponent;
-  let fixture: ComponentFixture<ONamaHomeComponent>;
+describe('OUniverzitetuHomeComponent', () => {
+  let component: OUniverzitetuHomeComponent;
+  let fixture: ComponentFixture<OUniverzitetuHomeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ONamaHomeComponent]
+      declarations: [OUniverzitetuHomeComponent]
     })
       .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ONamaHomeComponent);
+    fixture = TestBed.createComponent(OUniverzitetuHomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

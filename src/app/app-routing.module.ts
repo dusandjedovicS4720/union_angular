@@ -1,8 +1,8 @@
-import {NgModule} from '@angular/core';
-import {Routes, RouterModule} from '@angular/router';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 // import {NotFoundComponent} from './not-found/not-found.component';
-import {PocetnaComponent} from "./pocetna/pocetna.component";
+import { PocetnaComponent } from './pocetna/pocetna.component';
 
 const routes: Routes = [
   {
@@ -11,28 +11,42 @@ const routes: Routes = [
       import('./kontakt/kontakt.module').then((m) => m.KontaktModule),
   },
   {
-    path: 'o-nama',
+    path: 'o-univerzitetu',
     loadChildren: () =>
-      import('./o-nama/o-nama.module').then((m) => m.ONamaModule),
+      import('./o-univerzitetu/o-univerzitetu.module').then(
+        (m) => m.OUniverzitetuModule
+      ),
   },
   {
     path: 'akti',
+    loadChildren: () => import('./akti/akti.module').then((m) => m.AktiModule),
+  },
+  {
+    path: 'repozitorijum',
     loadChildren: () =>
-      import('./akti/akti.module').then((m) => m.AktiModule),
+      import('./repozitorijum/repozitorijum.module').then(
+        (m) => m.RepozitorijumModule
+      ),
   },
   {
     path: 'clanice',
     loadChildren: () =>
       import('./clanice/clanice.module').then((m) => m.ClaniceModule),
   },
-  {path: 'pocetna', component: PocetnaComponent},
-  {path: '', redirectTo: '/pocetna', pathMatch: 'full'},
-  {path: '**', redirectTo: '/pocetna'}
+  { path: 'pocetna', component: PocetnaComponent },
+  { path: '', redirectTo: '/pocetna', pathMatch: 'full' },
+  { path: '**', redirectTo: '/pocetna' },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(
+      routes,
+      // Preload for better performance
+      // Only needed to be defined on the root level 
+      { preloadingStrategy: PreloadAllModules }
+      ),
+  ],
+  exports: [RouterModule],
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule {}

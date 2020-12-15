@@ -1,0 +1,33 @@
+<app-navigation>
+
+    <div class="wrapper">
+
+        <app-overlay-image>Repozitorijum</app-overlay-image>
+
+        <div class="w-full lg:p-8 lg:container lg:mx-auto shadow-2xl font-poppins font-normal" style="color:#5e709d;background: rgb(235, 244, 253);
+       background: linear-gradient(190deg,rgba(235, 244, 253, 1) 0%,rgba(255, 255, 255, 0) 45%);
+       border-right: 13px solid #42b983; border-radius: 20px;
+       ">
+
+            <div *ngIf="displayGrid1">
+                <ag-grid-angular class="ag-theme-alpine" [rowData]="rowsData_Grid1" [columnDefs]="columnDefs_Grid1"
+                    [gridOptions]="gridOptions_Grid1" [defaultColDef]="defaultColDef"
+                    [maxConcurrentDatasourceRequests]="maxConcurrentDatasourceRequests__Grid1"
+                    [domLayout]="domLayout_Grid1" [pagination]="pagination_Grid1"
+                    [paginationPageSize]="paginationPageSize_Grid1" (gridReady)="onGridReady_Grid1($event)"
+                    [rowSelection]="rowSelection" [enableCellTextSelection]="enableCellTextSelection"
+                    [frameworkComponents]="frameworkComponents" (gridSizeChanged)="onGridSizeChanged($event)"
+                    (paginationChanged)="onPaginationChanged($event)" (firstDataRendered)="headerHeightSetter($event)"
+                    (columnResized)="headerHeightSetter($event)">
+                </ag-grid-angular>
+
+            </div>
+
+        </div>
+
+        <app-footer [backgroundColor]='"#fff"' [textColor]='"#1c1b7e"' [nameColor]='"#8C4BFF"' [isLogoDark]="true">
+        </app-footer>
+
+    </div>
+
+</app-navigation>
