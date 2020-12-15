@@ -1,9 +1,12 @@
-# generating Universal https://www.digitalocean.com/community/tutorials/angular-angular-universal
+# generating Universal 
+https://www.digitalocean.com/community/tutorials/angular-angular-universal
 ng add @nguniversal/express-engine --clientProject {{ name of your project }}
 # If @angular/platform-browser is not found:
 npm i @angular/platform-browser
-# Run
+# Build and run/compile without change detection
 npm run build:ssr && npm run serve:ssr
+# Run with change detection
+ng run angular-union:serve-ssr
 # Universal Application runs on port 4000 instead of 4200
 
 # AngularUnion
