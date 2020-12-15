@@ -40,12 +40,10 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(
-      routes,
-      // Preload for better performance
-      // Only needed to be defined on the root level 
-      { preloadingStrategy: PreloadAllModules }
-      ),
+    RouterModule.forRoot(routes, 
+// Preload for better performance
+// Only needed to be defined on the root level 
+{ preloadingStrategy: PreloadAllModules, initialNavigation: 'enabled' }),
   ],
   exports: [RouterModule],
 })

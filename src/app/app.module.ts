@@ -17,7 +17,7 @@ import {PocetnaComponent} from './pocetna/pocetna.component';
     NotFoundComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     BrowserAnimationsModule,
     SharedModule,
     AppRoutingModule,
